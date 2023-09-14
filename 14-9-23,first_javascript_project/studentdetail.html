@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student detail</title>
+    <style>
+        .bl {
+            border-left: 0px;
+        }
+
+        .br {
+            border-right: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <table width="800px" border="1px" cellpadding="10px" cellspacing="0px" align="center">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    STUDENT DETAIL
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="br" align="center">
+                    STUDENT NAME :-
+                </td>
+                <td id="student" class="bl"></td>
+            </tr>
+            <tr>
+                <td class="br" align="center">
+                    GRID NUMBER :-
+                </td>
+                <td id="grid" class="bl"></td>
+            </tr>
+            <tr>
+                <td class="br" align="center">
+                    COURSE NAME :-
+                </td>
+                <td id="course" class="bl"></td>
+            </tr>
+            <tr>
+                <td class="br" align="center">
+                    CONTACT NUMBER :-
+                </td>
+                <td id="contact" class="bl"></td>
+            </tr>
+            <tr>
+                <td class="br" align="center">
+                    EMAIL ID :-
+                </td>
+                <td id="email" class="bl"></td>
+            </tr>
+            <tr>
+                <td class="br" align="center">
+                    ADDRESS :-
+                </td>
+                <td id="add" class="bl"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var studentname = prompt("ENTER STUDENT NAME");
+        var gridnumber = prompt("ENTER GRID NUMBER");
+        var coursename = prompt("ENTER COURSE NAME");
+        var contactnumber = prompt("ENTER CONTACT NUMBER");
+        var emailid = prompt("ENTER EMAIL ID");
+        var address = prompt("ENTER ADDRESS");
+        document.getElementById("student").innerHTML = studentname;
+        document.getElementById("grid").innerHTML = gridnumber;
+        document.getElementById("course").innerHTML = coursename;
+        document.getElementById("contact").innerHTML = contactnumber;
+        document.getElementById("email").innerHTML = emailid;
+        document.getElementById("add").innerHTML = address;
+    </script>
+</body>
+
+</html>

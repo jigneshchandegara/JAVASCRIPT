@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTRICITY BILL</title>
+    <style>
+        .bl {
+            border-left: 0px;
+        }
+
+        .br {
+            border-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%" border="1px" cellpadding="10px" cellspacing="0px" align="center">
+        <thead align="center">
+            <tr>
+                <th colspan="3">Dakshin Gujarat Vij Company Limited</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr align="center">
+                <th>ELECTRICITY BILL</th>
+                <th>DATE</th>
+                <th>TIME</th>
+            </tr>
+            <tr align="center">
+                <th>CUSTOMER SERVICE NO :- 1800 233 3003</th>
+                <td id="date"></td>
+                <td id="time"></td>
+            </tr>
+            <tr>
+                <th class="br">COUSTOMER NAME :-</th>
+                <td class="bl" colspan="2" id="name"></td>
+            </tr>
+            <tr>
+                <th class="br">COUSTOMER ID NUMBER :-</th>
+                <td class="bl" colspan="2" id="idnumber"></td>
+            </tr>
+            <tr>
+                <th class="br">ADDRESS :-</th>
+                <td class="bl" colspan="2" id="add"></td>
+            </tr>
+            <tr>
+                <th class="br">COUSTOMER MOBILE NUMBER :-</th>
+                <td class="bl" colspan="2" id="mobile"></td>
+            </tr>
+            <tr align="center">
+                <th width="33%">CONSUME UNIT</td>
+                <th width="33%">PER UNIT RATE</td>
+                <th width="33%">TOTAL BILL</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr align="center">
+                <td width="33%" id="unit"></td>
+                <td width="33%" id="rate"></td>
+                <td width="33%" id="bill"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        var date = (prompt("enter date"));
+        var time = (prompt("enter time"));
+        var coustomername = (prompt("enter coustomer name"));
+        var coustomeridnumber = (prompt("enter coustomer id number (only for 6 digit id number)"));
+        var address = (prompt("enter address"));
+        var coustomermobile = (prompt("enter coustomer mobile"));
+        var consumeunit = parseFloat(prompt("enter consume unit"));
+        var perunitrate = parseFloat(prompt("enter per unit rate"));
+        var totalbill = (consumeunit*perunitrate);
+
+        document.getElementById('date').innerHTML=date;
+        document.getElementById('time').innerHTML=time;
+        document.getElementById('name').innerHTML=coustomername;
+        document.getElementById('idnumber').innerHTML=coustomeridnumber;
+        document.getElementById('add').innerHTML=address;
+        document.getElementById('mobile').innerHTML=coustomermobile;
+        document.getElementById('unit').innerHTML=consumeunit;
+        document.getElementById('rate').innerHTML=perunitrate;
+        document.getElementById('bill').innerHTML=totalbill;
+    </script>
+</body>
+</html>

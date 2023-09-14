@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marksheet</title>
+</head>
+
+<body>
+    <table width="1000px" border="1px" cellpadding="10px" cellspacing="0px" align="center">
+        <thead>
+            <tr>
+                <th colspan="8">
+                    STUDENT MARKSHEET DETAIL
+                </th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>NAME</td>
+                <td>ACCOUNTANCY</td>
+                <td>ECONOMICS</td>
+                <td>STATISTICS</td>
+                <td>ENGLISH</td>
+                <td>GUJARATI</td>
+                <td>TOTAL MARK</td>
+                <td>PERCENTAGE (%)</td>
+            </tr>
+            <tr>
+                <td id="name"></td>
+                <td id="account"></td>
+                <td id="eco"></td>
+                <td id="state"></td>
+                <td id="eng"></td>
+                <td id="guj"></td>
+                <td id="total"></td>
+                <td id="perc"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        var studentname = (prompt("enter student name "));
+        var accountancy = parseFloat(prompt("enter account mark"));
+        var economics = parseFloat(prompt("enter economics mark"));
+        var statistics = parseFloat(prompt("enter statistics mark"));
+        var english = parseFloat(prompt("enter english mark"));
+        var gujarati = parseFloat(prompt("enter gujarati mark"));
+        var totalmark = (accountancy + economics + statistics + english + gujarati);
+        var percentage = (totalmark / 5);
+        document.getElementById('name').innerHTML = studentname;
+        document.getElementById('account').innerHTML = accountancy;
+        document.getElementById('eco').innerHTML = economics;
+        document.getElementById('state').innerHTML = statistics;
+        document.getElementById('eng').innerHTML = english;
+        document.getElementById('guj').innerHTML = gujarati;
+        document.getElementById('total').innerHTML = totalmark;
+        document.getElementById('perc').innerHTML = percentage;
+
+    </script>
+</body>
+
+</html>
