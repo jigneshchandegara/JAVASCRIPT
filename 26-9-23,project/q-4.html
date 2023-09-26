@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> find gross salary</title>
+</head>
+<body>
+    <p>4.Write a javascript Program to find gross salary.</p>
+    <p>fixeallowance :- </p>
+    <p> HRA=10%</p>
+    <p>DA=5%</p>
+    <p>TA=8%</p>
+    <br>
+    <script type="text/javascript">
+        var salary = parseFloat(prompt("enter the salary :-"));
+        var HRA = 10;
+        var DA = 5 ;
+        var TA =  8;
+        var fixeallowance = ((salary*HRA)+(salary*DA)+(salary*TA))/100;
+        // var fixeallowance = (salary*HRA)/100+(salary*DA)/100+(salary*TA)/100;
+        var salaryamout = salary+fixeallowance;
+        document.write(`salary = ${salaryamout}`);
+    </script>
+</body>
+</html>

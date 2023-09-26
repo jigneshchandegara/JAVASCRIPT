@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rate of interest</title>
+</head>
+<body>
+    <p>7. Write a javascript Program to find  rate of interest.(p * r  * n / 100)</p>
+    <br>
+    <script type="text/javascript">
+    
+        var principalamount = parseFloat(prompt("enter the amount :- "));
+        var interestrate = parseFloat(prompt("enter the interestrate :- "));
+        var year = parseFloat(prompt("enter the year :- "));
+        var totaleamount = principalamount+((principalamount*interestrate)/100)*year;
+        document.write(`TOTALE AMOUNT =${totaleamount}`)
+    </script>
+</body>
+</html>
