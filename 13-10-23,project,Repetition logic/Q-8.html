@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-8</title>
+</head>
+<body>
+    <h1>8. Write a JavaScript program to find week day from first letter of it using if else if.</h1>
+    <script type="text/javascript">
+        let weekname = prompt("enter first two letter");
+
+        if(weekname == "MO" || weekname == "mo"){
+            document.write(`user input :- ${weekname} <br>  output :- monday`);
+        }
+        else if(weekname == "TU" || weekname == "tu"){
+            document.write(`user input :- ${weekname} <br> output :- Tuesday`);
+        }
+        else if(weekname == "WE" || weekname == "we"){
+            document.write(`user input :- ${weekname} <br> output :- Wednesday`);
+        }
+        else if(weekname == "TH" || weekname == "th"){
+            document.write(`user input :- ${weekname} <br> output :- Thursday`);
+        }
+        else if(weekname == "FR" || weekname == "fr"){
+            document.write(`user input :- ${weekname} <br> output :- Friday`);
+        }
+        else if(weekname == "SA" || weekname == "sa"){
+            document.write(`user input :- ${weekname} <br> output :- Saturday`);
+        }
+        else if(weekname == "SU" || weekname == "su"){
+            document.write(`user input :- ${weekname} <br> output :- Sunday`);
+        }
+        else{
+            document.write("this letter not week name");
+        }
+
+        
+    </script>
+</body>
+</html>

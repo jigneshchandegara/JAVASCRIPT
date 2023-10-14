@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-6</title>
+    <style>
+        .bl {
+            border-left: 0px;
+        }
+
+        .br {
+            border-right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>6.Write a Javascript program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following.</h1>
+    <script type="text/javascript">
+        
+        let Physics = parseInt(prompt("enter physics marks"));
+        let Chemistry = parseInt(prompt("enter Chemistry marks"));
+        let Biology = parseInt(prompt("enter Biology marks"));
+        let Mathematics = parseInt(prompt("enter Mathematics marks"));
+        let Computer = parseInt(prompt("enter Computer marks"));
+        
+        document.write(`physics = ${Physics} <br>`);
+        document.write(`Chemistry = ${Chemistry} <br>`);
+        document.write(`Biology = ${Biology} <br>`);
+        document.write(`Mathematics = ${Mathematics} <br>`);
+        document.write(`Computer = ${Computer} <br>`);
+
+        let total = (Physics + Chemistry + Biology + Mathematics + Computer)/5;
+        
+       if(total >=90 && total < 100){
+            document.write(`Total Percentage ${total} and Grade is A`);
+       }
+       else if(total >=80 && total <=89){
+            document.write(`Total Percentage ${total} and Grade is B`);
+       }
+       else if(total >=70 && total <=79){
+            document.write(`Total Percentage ${total} and Grade is C`);
+       }
+       else if(total >=60 && total <=69){
+            document.write(`Total Percentage ${total} and Grade is D`);
+       }
+       else if(total >=50 && total <=59){
+            document.write(`Total Percentage ${total} and Grade is E`);
+       }
+       else if(total >=40 && total <=49){
+            document.write(`Total Percentage ${total} and Grade is F`);
+       }
+       else{
+            document.write("fail")
+       }
+        
+    </script>
+</body>
+</html>

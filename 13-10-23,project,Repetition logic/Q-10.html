@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-10</title>
+</head>
+
+<body>
+    <h1>10. Write a JavaScript program to create basic calculator using switch case.
+        Ex. User input a,b and select choice + , - , * , / </h1>
+    <script type="text/javascript">
+        let a = parseFloat(prompt("enter value A :-"));
+        let b = parseFloat(prompt("enter value B :-"));
+        let choice = prompt("select and choice + , - , * , / , %");
+        let result = 0;
+        document.write(`A = ${a} <br>`);
+        document.write(`B = ${b} <br>`);
+        switch (choice) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                result = a / b;
+                break;
+            case '%':
+                result = a % b;
+                break;
+            default:
+                printf("Invalid operator!\n");
+                break;
+        }
+
+        document.write(`answer = ${result}`)
+    </script>
+</body>
+
+</html>
