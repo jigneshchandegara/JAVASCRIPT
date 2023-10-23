@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-13</title>
+</head>
+
+<body>
+    <h1>13.Write javascript program print out Fibonacci series. (0,1,1,2,3,5,8…)</h1>
+    <script type="text/javascript">
+        let n = parseInt(prompt("enter value"));
+        let f1 = 0, f2 = 1, f3;
+
+        document.write(f1+",");
+        document.write(f2+",");
+
+        f3 = f1 + f2;
+
+        for (let i = 3; i <= n; i++) {
+            document.write(f3+",");
+            f1 = f2;
+            f2 = f3;
+            f3 = f1 + f2;
+        }
+    </script>
+
+
+    <!-- <script type="text/javascript">
+        let n = parseInt(prompt("enter value"));
+        let f1 = 0, f2 = 1, f3;
+
+        document.write(f1 + " ");
+        document.write(f2 + " ");
+
+        f3 = f1 + f2;
+
+        while(f3 <= n){
+            document.write(f3+",");
+            f1 = f2;
+            f2 = f3;
+            f3 = f1 + f2;
+        }
+    </script> -->
+</body>
+
+</html>
