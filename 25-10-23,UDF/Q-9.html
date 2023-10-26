@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-9</title>
+</head>
+
+<body>
+    <h1>9.Write a JavaScript program to input angles of a triangle and check whether triangle is valid or not.(using all
+        function)
+    </h1>
+    <script type="text/javascript">
+
+        let a = parseInt(prompt("enter value A :-"));
+        let b = parseInt(prompt("enter value B :-"));
+        let c = parseInt(prompt("enter value C :-"));
+
+        const triangle = (a,b,c) => {
+        
+            let total = a + b + c;
+            document.write(`A = ${a} <br>`);
+            document.write(`B = ${b} <br>`);
+            document.write(`C = ${c} <br>`);
+
+            if (total == 180) {
+                document.write(`this value ${total} is a triangle valid value `);
+            }
+            else {
+                document.write(`this value ${total} is a triangle not valid value `);
+
+            }
+        }   
+
+        triangle(a,b,c);
+    </script>
+
+</body>
+
+</html>

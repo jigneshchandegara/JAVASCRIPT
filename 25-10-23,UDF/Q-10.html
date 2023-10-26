@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-10</title>
+</head>
+
+<body>
+    <h1>10.Write a JavaScript program to decide that you eligible for voting? (using all function)</h1>
+    <script type="text/javascript">
+        
+        let age = parseInt(prompt("enter age this person eligible for voting"));
+        document.write("AGE = "+age+"<br>");
+
+        const voting = (age) => {
+            let check = (age >= 18) ? "You are eligible for voting" : "Sorry! You are not eligible for voting yet." ;
+            document.write(check);
+        }
+
+        voting(age);
+    </script>
+</body>
+</html>

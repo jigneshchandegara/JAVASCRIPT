@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-7</title>
+</head>
+
+<body>
+    <h1>7.Write a JavaScript program to find which number is greter in 3 numbers using nested if else.(using all
+        function)</h1>
+    <script type="text/javascript">
+        const greter = () => {
+            let a = parseInt(prompt("enter number A"));
+            let b = parseInt(prompt("enter number B"));
+            let c = parseInt(prompt("enter number C"));
+
+            document.write("A = "+a + "  <br>");
+            document.write("B = "+b + "  <br>");
+            document.write("C = "+c + "  <br>");
+
+
+            if(a>b){
+                if(a>c){
+                    document.write("A is GRETER");
+                }
+                else{
+                    document.write("C is GRETER");
+                }
+            }
+            else{
+                if(b>c){
+                    document.write("B is GRETER");
+                }
+                else{
+                    document.write("C is GRETER");
+                }
+            }
+        }
+        greter();
+    </script>
+</body>
+
+</html>
