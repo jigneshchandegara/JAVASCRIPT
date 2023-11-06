@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-2</title>
+</head>
+
+<body>
+
+
+    <table width="100%" border="1px" cellpadding="10px" cellspacing="0px" align="center">
+        <thead align="center">
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="name1"></td>
+                <td id="email1"></td>
+                <td id="phone1"></td>
+            </tr>
+            <tr>
+                <td id="name2"></td>
+                <td id="email2"></td>
+                <td id="phone2"></td>
+            </tr>
+            <tr>
+                <td id="name3"></td>
+                <td id="email3"></td>
+                <td id="phone3"></td>
+            </tr>
+            <tr>
+                <td id="name4"></td>
+                <td id="email4"></td>
+                <td id="phone4"></td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script type="text/javascript">
+        class parson{
+            constructor(name, email, phone){
+                this.parsonname = name;
+                this.parsonemail = email;
+                this.parsonphone = phone;
+            }
+            parname(){
+                
+                document.getElementById('name1').innerHTML = p1.parsonname;
+                document.getElementById('name2').innerHTML = p2.parsonname;
+                document.getElementById('name3').innerHTML = p3.parsonname;
+                document.getElementById('name4').innerHTML = p4.parsonname;
+            }
+            parmail(){
+                
+                document.getElementById('email1').innerHTML = p1.parsonemail;
+                document.getElementById('email2').innerHTML = p2.parsonemail;
+                document.getElementById('email3').innerHTML = p3.parsonemail;
+                document.getElementById('email4').innerHTML = p4.parsonemail;
+            }
+            parphonenum(){
+                
+                document.getElementById('phone1').innerHTML = p1.parsonphone;
+                document.getElementById('phone2').innerHTML = p2.parsonphone;
+                document.getElementById('phone3').innerHTML = p3.parsonphone;
+                document.getElementById('phone4').innerHTML = p4.parsonphone;
+            }
+        }
+
+        let p1 = new parson("jay","jay@gmail.com",123456);
+        let p2 = new parson("ajay","ajay@gmail.com",123456);
+        let p3 = new parson("vijay","vijay@gmail.com",123456);
+        let p4 = new parson("ashish","ashish@gmail.com",123456);
+
+        p1.parname();
+        p1.parmail();
+        p1.parphonenum();
+
+        p2.parname();
+        p2.parmail();
+        p2.parphonenum();
+
+        p3.parname();
+        p3.parmail();
+        p3.parphonenum();
+
+        p4.parname();
+        p4.parmail();
+        p4.parphonenum();
+
+
+
+       
+      
+    </script>
+</body>
+</html>

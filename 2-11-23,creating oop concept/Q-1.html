@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+
+<body>
+    <h1>1. wap to javascript class and object method use program to input marks of five subjects Physics, Chemistry,
+        Biology, Mathematics and Computer. Calculate percentage and grade according to following</h1>
+    <script type="text/javascript">
+        class marks {
+            constructor(phy, chem, bio, mathe, com) {
+                this.physics = phy;
+                this.chemistry = chem;
+                this.biology = bio;
+                this.mathematics = mathe;
+                this.computer = com;
+            }
+            inputmarks() {
+                document.write(`physics = ${this.physics} <br>`);
+                document.write(`chemistry = ${this.chemistry} <br>`);
+                document.write(`biology = ${this.biology} <br>`);
+                document.write(`mathematics = ${this.mathematics} <br>`);
+                document.write(`computer = ${this.computer} <br>`);
+            }
+            printgrade() {
+
+                let total = (this.physics + this.chemistry + this.biology + this.mathematics + this.computer) / 5;
+
+                if (total >= 90 && total < 100) {
+                    document.write(`Total Percentage ${total} and Grade is A`);
+                }
+                else if (total >= 80 && total <= 89) {
+                    document.write(`Total Percentage ${total} and Grade is B`);
+                }
+                else if (total >= 70 && total <= 79) {
+                    document.write(`Total Percentage ${total} and Grade is C`);
+                }
+                else if (total >= 60 && total <= 69) {
+                    document.write(`Total Percentage ${total} and Grade is D`);
+                }
+                else if (total >= 50 && total <= 59) {
+                    document.write(`Total Percentage ${total} and Grade is E`);
+                }
+                else if (total >= 40 && total <= 49) {
+                    document.write(`Total Percentage ${total} and Grade is F`);
+                }
+                else {
+                    document.write("fail");
+                }
+            }
+
+
+        }
+
+        let phy = parseInt(prompt("enter physics marks"));
+        let chem = parseInt(prompt("enter chemistry marks"));
+        let bio = parseInt(prompt("enter biology marks"));
+        let mathe = parseInt(prompt("enter mathematics marks"));
+        let com = parseInt(prompt("enter computer marks"));
+        let m1 = new marks(phy, chem, bio, mathe, com);
+        m1.inputmarks();
+        m1.printgrade();
+
+    </script>
+</body>
+
+</html>
