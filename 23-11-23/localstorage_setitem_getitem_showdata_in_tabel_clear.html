@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage setitem getitem showdata in tabel clear</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="">name</label>
+        <input type="text" id="n1">
+        <br>
+        <label for="">lname</label>
+        <input type="text" id="n2">
+        <br>
+        <label for="">email</label>
+        <input type="email" id="n3">
+        <br>
+        <button onclick="saveData()">Save</button>
+        <br>
+        <button onclick="clearData()">Clear</button>
+    </form>
+
+    <table width="100%" border="1px" cellpadding="10px" cellspacing="0px" align="center">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody id="showdata" align="center">
+        </tbody>
+    </table>
+
+    <script>
+        function saveData() {
+            let name = document.getElementById('n1').value;
+            let lname = document.getElementById('n2').value;
+            let email = document.getElementById('n3').value;
+
+            if (name == "" || lname == "" || email == "") {
+                alert("Please fill all details");
+            } else {
+                let userdata = JSON.parse(localStorage.getItem("parson")) ?? [];
+                userdata.push({
+                    name: name,
+                    lname: lname,
+                    email: email
+                });
+                localStorage.setItem("parson", JSON.stringify(userdata));
+            }
+
+            show();
+        }
+
+        const show = () => {
+            let showdata = document.getElementById("showdata");
+            showdata.innerHTML = "";
+            let userdata = JSON.parse(localStorage.getItem("parson")) ?? [];
+            userdata.map(data => {
+                let row = document.createElement("tr");
+                row.innerHTML = `
+                        <td>${data.name}</td>
+                        <td>${data.lname}</td>
+                        <td>${data.email}</td>`;
+                showdata.appendChild(row)
+            });
+        }
+
+        show();
+
+        const clearData = () => {
+            // localStorage.clear();
+            localStorage.removeItem("parson");
+            data = [];
+            location.reload();
+        }
+
+    </script>
+</body>
+
+</html>
