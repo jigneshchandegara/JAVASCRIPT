@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>shopping</title>
+    <!-- <style>
+        .main{
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    </style> -->
+</head>
+
+<body>
+    <nav class="bg-white w-full shadow-md z-[9000] sticky top-0 ">
+        <div class="h-20 container mx-auto sm:mx-auto md:mx-auto lg:mx-auto py-5 flex justify-between items-center">
+            <div class="text-center font-semibold">
+                <a href="index.html">shopping</a>
+            </div>
+            <div class="hidden lg:block">
+                <ul class="flex">
+                    <li class="mr-5 font-medium"><a href="#">MAN</a></li>
+                    <li class="mr-5 font-medium"><a href="#">WOMENS</a></li>
+                    <li class="mr-5 font-medium"><a href="#">MOBILE</a></li>
+                    <li class="mr-5 font-medium"><a href="#">Electronics</a></li>
+                    <li class="mr-5 font-medium"><a href="#">Home Furnishing</a></li>
+
+                </ul>
+            </div>
+            <div class="hidden lg:block">
+                <a href="#" class="text-black font-semibold py-1 px-4">
+                    <i class="fa-solid fa-user px-2"></i>Login
+                </a>
+                <a href="addcard.html" class="text-black font-semibold py-1 px-4">
+                    <i class="fa-solid fa-cart-shopping px-2"></i>addcard
+                </a>
+            </div>
+            <button class="block lg:hidden py-3 px-4 mx-2 focus:outline-none group">
+                <a href="addcard.html" class="text-black font-semibold py-1 px-4"><i
+                        class="fa-solid fa-cart-shopping px-2"></i>addcard</a>
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <div
+                    class="absolute top-0 -right-full h-screen md:w-3/12 lg:w-2/12  bg-white border opacity-0 group-focus:right-0 group-focus:opacity-100 transition-all duration-300">
+                    <a href="#" class="absolute top-0 left-3"><i class="fa-solid fa-xmark"></i></a>
+                    <ul class="w-full pt-10 cursor-pointer">
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">
+                            <a href="#">MAN</a>
+                        </li>
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">
+                            <a href="#">WOMENS</a>
+                        </li>
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">
+                            <a href="#">MOBILE</a>
+                        </li>
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">
+                            <a href="#">Electronics</a>
+                        </li>
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">
+                            <a href="#">Home Furnishing</a>
+                        </li>
+                        <li class="w-52 text-black font-semibold text-start pl-2  py-4 block">
+                            <a href="#">
+                                <i class="fa-solid fa-user pr-2"></i>Login
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </button>
+        </div>
+    </nav>
+    <!-- nav-end -->
+    <section class="container mx-auto flex">
+        <aside class="sm:w-[25%] md:w-[15%]  ">
+            <div class="m-3 p-3">
+                <div class="py-4 text-base font-semibold ">finter product price</div>
+                <ul>
+                    <button onclick="price1()"> <li class="pb-4">
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 100 - 
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 1000
+                    </li></button>
+                   
+                    <button onclick="price2()"><li class="pb-4">
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 1000 - 
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 5000
+                    </li></button>
+                    <button onclick="price3()"><li class="pb-4">
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 5000 -
+                         <i class="fa-solid fa-indian-rupee-sign"></i> 10000
+                    </li></button>
+                    <button onclick="price4()"><li class="pb-4">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>10000 -
+                         <i class="fa-solid fa-indian-rupee-sign"></i>150000
+                    </li></button>
+                </ul>
+            </div>
+        </aside>
+        <div class="w-[75%] md:w-[85%] m-5">
+            <div class="px-5 py-5 font-semibold text-xl"> ALL PRODUCT</div>
+            <!-- <div class="p-5">
+                            <div class="w-60 h-96 rounded-t-lg border-2 border-slate-400 rounded relative flex flex-col">
+                                <img src="image/Coffee Table.webp" class="w-full rounded-t-lg h-40 align-middle" alt="...">
+                                <div class="p-4 bg-white">
+                                    <h5 class="mb-2 text-lg font-semibold">Card title</h5>
+                                    <p class="mt-0 mb-4">Some quick .</p>
+                                    <p class="mt-0 mb-4">200.</p>
+                                    <a href="#" class="px-3 py-2 text-base font-normal bg-blue-500 text-white">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div> -->
+            <!-- <div class="flex flex-wrap justify-between div-box"></div> -->
+            <div class="flex flex-wrap justify-between " id="div-box"></div>
+            <div class="flex flex-wrap justify-between " id="pricedata1"></div>
+            <div class="flex flex-wrap justify-between " id="pricedata2"></div>
+            <div class="flex flex-wrap justify-between " id="pricedata3"></div>
+            <div class="flex flex-wrap justify-between " id="pricedata4"></div>
+        </div>
+
+    </section>
+
+    <section class=" bg-slate-700">
+        <div class="container mx-auto p-5 lg:flex lg:justify-between  text-white">
+            <div class="flex-col ">
+                <span class="text-xl font-semibold">about</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">contact</li>
+                    <li class="hover:underline cursor-pointer">about us</li>
+                    <li class="hover:underline cursor-pointer">careers</li>
+                    <li class="hover:underline cursor-pointer ">corporate information</li>
+                </ul>
+            </div>
+            <div class="flex-col">
+                <span class="text-xl font-semibold">help</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">payments</li>
+                    <li class="hover:underline cursor-pointer">shipping</li>
+                    <li class="hover:underline cursor-pointer">cancellation & returns</li>
+                    <li class="hover:underline cursor-pointer">FAQ</li>
+                </ul>
+            </div>
+            <div class="flex-col">
+                <span class="text-xl font-semibold">consumer policy</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">cancellation & returns</li>
+                    <li class="hover:underline cursor-pointer">terms os use</li>
+                    <li class="hover:underline cursor-pointer">security</li>
+                    <li class="hover:underline cursor-pointer">privacy</li>
+                    <li class="hover:underline cursor-pointer">grievance redressal</li>
+                </ul>
+            </div>
+            <div class="flex-col">
+                <span class="text-xl font-semibold">social</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">facebook</li>
+                    <li class="hover:underline cursor-pointer">instagram</li>
+                    <li class="hover:underline cursor-pointer">youtube</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+<script src="./js/index.js"></script>
+<script src="./js/addcard.js"></script>
+
+</html>

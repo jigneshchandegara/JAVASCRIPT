@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <title>shopping</title>
+</head>
+
+<body>
+    <nav class="bg-white w-full shadow-md z-[9000] sticky top-0 ">
+        <div class="h-20 container mx-auto sm:mx-auto md:mx-auto lg:mx-auto py-5 flex justify-between items-center">
+            <div class="text-center font-semibold">
+                <a href="index.html">shopping</a>
+            </div>
+            <div class="hidden lg:block">
+                <ul class="flex">
+                    <li class="mr-5 font-medium"><a href="#">Home</a></li>
+                    <li class="mr-5 font-medium"><a href="product.html">Product</a></li>
+                    <li><input type="search" placeholder="search here ..." class="w-96  border-2 pl-2 rounded-md"></li>
+                </ul>
+            </div>
+            <div class="hidden lg:block">
+                <a href="#" class="text-black font-semibold py-1 px-4">
+                    <i class="fa-solid fa-user px-2"></i>Login
+                </a>
+                <a href="addcard.html" class="text-black font-semibold py-1 px-4">
+                    <i class="fa-solid fa-cart-shopping px-2"></i>addcard
+                </a>
+            </div>
+            <button class="block lg:hidden py-3 px-4 mx-2 focus:outline-none group">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <div
+                    class="absolute top-0 -right-full h-screen md:w-3/12 lg:w-2/12  bg-white border opacity-0 group-focus:right-0 group-focus:opacity-100 transition-all duration-300">
+                    <a href="#" class="absolute top-0 left-3"><i class="fa-solid fa-xmark"></i></a>
+                    <ul class="w-full pt-10 cursor-pointer">
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">home</li>
+                        <li class="w-52 text-black font-semibold text-start py-4 pl-2">product</li>
+                        <li class="w-52 text-black font-semibold text-start pl-2  py-4 block">
+                            <a href="#">
+                                <i class="fa-solid fa-user pr-2"></i>Login
+                            </a>
+                        </li>
+                        <li class="w-52 text-black font-semibold text-start pl-2  py-4 block">
+                            <a href="addcard.html">
+                                <i class="fa-solid fa-cart-shopping pr-2"></i>addcard
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </button>
+        </div>
+    </nav>
+    <!-- nav-end -->
+    <section class="container mx-auto">
+        <div class="relative">
+            <img src="image/ecommerce-website-banner2.webp" alt="shopping-time-banner1" class="w-full bg-cover ">
+            <!-- <span class="absolute bottom-[33%] left-[7.5%] bg-blue-500"><a href="#">SHOP NOW</a></span> -->
+        </div>
+    </section>
+    <section class="container mx-auto">
+        <div class="flex flex-wrap justify-between p-5" >
+            <div class="w-60 h-80 rounded-t-lg border-2 border-slate-400 rounded relative flex flex-col">
+                <img src="image/Coffee Table.webp" class="w-full rounded-t-lg h-40 align-middle" alt="...">
+                <div class="p-4 bg-white">
+                    <h5 class="mb-2 text-lg font-semibold">Coffee Table</h5>
+                    <p class="mt-0 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, assumenda.</p>
+                    <p class="mt-0 mb-4">&#8377;200.</p>
+                </div>
+            </div>
+            <div class="w-60 h-80 rounded-t-lg border-2 border-slate-400 rounded relative flex flex-col">
+                <img src="image/shoes.webp" class="w-full rounded-t-lg h-40 align-middle" alt="...">
+                <div class="p-4 bg-white">
+                    <h5 class="mb-2 text-lg font-semibold">shoes</h5>
+                    <p class="mt-0 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, assumenda.</p>
+                    <p class="mt-0 mb-4">&#8377;500.</p>
+                </div>
+            </div>
+            <div class="w-60 h-80 rounded-t-lg border-2 border-slate-400 rounded relative flex flex-col">
+                <img src="image/Google Pixel 7a.webp" class="w-full rounded-t-lg h-40 align-middle" alt="...">
+                <div class="p-4 bg-white">
+                    <h5 class="mb-2 text-lg font-semibold">Google Pixel 7a</h5>
+                    <p class="mt-0 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, assumenda.</p>
+                    <p class="mt-0 mb-4">&#8377;25000.</p>
+                </div>
+            </div>
+            <div class="w-60 h-80 rounded-t-lg border-2 border-slate-400 rounded relative flex flex-col">
+                <img src="image/Formal Shirt and Trousers.webp" class="w-full rounded-t-lg h-40 align-middle" alt="...">
+                <div class="p-4 bg-white">
+                    <h5 class="mb-2 text-lg font-semibold">Formal Shirt and Trousers</h5>
+                    <p class="mt-0 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, assumenda.</p>
+                    <p class="mt-0 mb-4">&#8377;1500.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class=" bg-slate-700 ">
+        <div class="container mx-auto p-5 lg:flex lg:justify-between text-white">
+            <div class="flex-col ">
+                <span class="text-xl font-semibold">about</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">contact</li>
+                    <li class="hover:underline cursor-pointer">about us</li>
+                    <li class="hover:underline cursor-pointer">careers</li>
+                    <li class="hover:underline cursor-pointer">corporate information</li>
+                </ul>
+            </div>
+            <div class="flex-col">
+                <span class="text-xl font-semibold">help</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">payments</li>
+                    <li class="hover:underline cursor-pointer">shipping</li>
+                    <li class="hover:underline cursor-pointer">cancellation & returns</li>
+                    <li class="hover:underline cursor-pointer">FAQ</li>
+                </ul>
+            </div>
+            <div class="flex-col">
+                <span class="text-xl font-semibold">consumer policy</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">cancellation & returns</li>
+                    <li class="hover:underline cursor-pointer">terms os use</li>
+                    <li class="hover:underline cursor-pointer">security</li>
+                    <li class="hover:underline cursor-pointer">privacy</li>
+                    <li class="hover:underline cursor-pointer">grievance redressal</li>
+                </ul>
+            </div>
+            <div class="flex-col">
+                <span class="text-xl font-semibold">social</span>
+                <ul>
+                    <li class="hover:underline cursor-pointer">facebook</li>
+                    <li class="hover:underline cursor-pointer">instagram</li>
+                    <li class="hover:underline cursor-pointer">youtube</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/addcard.js"></script>
+</body>
+
+</html>
