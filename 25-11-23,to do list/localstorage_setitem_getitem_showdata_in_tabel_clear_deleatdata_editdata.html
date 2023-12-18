@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname"><br><br>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname"><br><br>
+    <label for="lname">EMAIL:</label>
+    <input type="text" id="email"><br><br>
+    <button onclick="saveData()">Save</button><br><br>
+    <button onclick="clearData()">Clear</button>
+    <table id="data-table">
+        <thead>
+            <tr>
+                <th>INDEX.NO</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>email</th>
+                <th>dele</th>
+                <th>update</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+    </table>
+
+
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" name="index" id="index">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="firstname"><br><br>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lastname"><br><br>
+                    <label for="lname">EMAIL:</label>
+                    <input type="text" id="emailedit"><br><br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="updateshow()">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let data = JSON.parse(localStorage.getItem("parson")) || [];
+
+        function saveData() {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let email = document.getElementById("email").value;
+
+            const arr = {
+                firstName: fname,
+                lastName: lname,
+                emailName: email
+            };
+
+            data.push(arr);
+
+            
+            
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("email").value = "";
+            
+            localStorage.setItem("parson", JSON.stringify(data));
+            Tableshow();
+        }
+
+        function Tableshow() {
+            const tableBody = document.getElementById("table-body");
+            tableBody.innerHTML = "";
+
+            data.map((value, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                        <td>${index}</td>
+                        <td>${value.firstName}</td>
+                        <td>${value.lastName}</td>
+                        <td>${value.emailName}</td>
+                        <td><button onclick="deledata(${index})">Clear</button></td>
+                        <td><button onclick="update(${index})" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">update
+                        </button></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+        Tableshow();
+
+        function deledata(index) {
+            data.splice(index, 1);
+            localStorage.setItem("parson", JSON.stringify(data));
+            location.reload();
+        }
+        function clearData() {
+
+            localStorage.removeItem("parson");
+            data = [];
+            location.reload();
+        }
+
+        function update(index) {
+            const editindex = data[index];
+            const hidden = document.getElementById("index").value = index;
+            const firstname = document.getElementById("firstname").value = editindex.firstName;
+            const lastname = document.getElementById("lastname").value = editindex.lastName;
+            const emailedit = document.getElementById("emailedit").value = editindex.emailName;
+
+            console.log(hidden);
+
+            console.log(editindex);
+        }
+
+        function updateshow() {
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const emailedit = document.getElementById("emailedit").value;
+            const index = parseInt(document.getElementById("index").value);
+
+            const editdata = {
+                firstName: firstname,
+                lastName: lastname,
+                emailName: emailedit,
+            };
+
+            data[index] = editdata;
+
+            localStorage.setItem("parson", JSON.stringify(data));
+            location.reload();
+        }
+
+        // localStorage.clear();
+    </script>
+
+</body>
+
+</html>
