@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dog api</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <button onclick="show()">press</button>
+    <div id="content"></div>
+
+    <script>
+        function show(){
+            $.ajax({
+                url: "https://dog.ceo/api/breeds/image/random",
+                method: "GET",
+                success:(data) => {
+                    const card =document.getElementById("content");
+                    card.innerHTML = `<img src="${data.message}" alt="dog">`;
+                    }
+                });
+        }
+    </script>
+</body>
+</html>
